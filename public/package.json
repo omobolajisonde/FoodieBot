@@ -1,0 +1,19 @@
+{
+  "name": "foodiebot",
+  "version": "1.0.0",
+  "description": "A chatbot that will assist customers in placing orders for their preferred meals.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omobolajisonde/FoodieBot.git"
+  },
+  "author": "Sonde Omobolaji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omobolajisonde/FoodieBot/issues"
+  },
+  "homepage": "https://github.com/omobolajisonde/FoodieBot#readme"
+}
