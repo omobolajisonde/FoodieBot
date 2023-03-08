@@ -13,7 +13,7 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: ["http://127.0.0.1:5500/"],
+    origin: ["http://localhost:8081"],
     credentials: true,
   },
 });
@@ -30,3 +30,8 @@ connectToMongoDB()
       "Connection to MongoDB was unsuccessful."
     );
   });
+
+// SOCKET.io
+io.on("connection", (socket) => {
+  console.log(socket.id);
+});
