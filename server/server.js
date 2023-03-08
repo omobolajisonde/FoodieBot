@@ -6,6 +6,8 @@ require("dotenv").config(); // Loads .env file contents into process.env.
 const app = require("./app");
 const connectToMongoDB = require("./db");
 
+const Resource = require("./models/resourceModel");
+
 const PORT = process.env.PORT || 8080;
 const HOST = process.env.HOST || "localhost";
 
@@ -33,6 +35,13 @@ connectToMongoDB()
   });
 
 // SOCKET.io
-io.on("connection", (socket) => {
+io.on("connection", async (socket) => {
   console.log(socket.id);
+
+  // Send options
+  const resource = await Resource.find({});
+  socket.emit("sendOptions", resource[0].options);
+
+  // Save chat to the DB
+  socket.on("saveChat", ({ message, isBotMsg }) => {});
 });

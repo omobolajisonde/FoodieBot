@@ -1,9 +1,9 @@
 const fs = require("fs");
 const mongoose = require("mongoose");
-const connectToMongoDB = require("./../db");
+const connectToMongoDB = require("../db");
 require("dotenv").config();
 
-const Resource = require("./../models/resourceModel");
+const Resource = require("../models/resourceModel");
 
 // const DB = process.env.DATABASE.replace(
 //   "<PASSWORD>",

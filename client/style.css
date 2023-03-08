@@ -126,10 +126,12 @@ main {
 }
 .chat__bubble {
   font-size: 1.4rem;
-  padding: 6px;
+  padding: 1rem;
   background-color: #ffbd54;
 }
-
+.chat__bubble > ul {
+  list-style-position: inside;
+}
 .chat__input {
   margin-top: 1.2rem;
   padding: 0.4rem;
