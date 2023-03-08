@@ -23,9 +23,7 @@ connectToMongoDB()
     // IMPORT DATA INTO DB
     const importData = async function () {
       try {
-        await Tour.create(tours);
-        await User.create(users, { validateBeforeSave: false });
-        await Review.create(reviews);
+        await Resource.create({ options, menu });
         console.log("Data successfully uploaded!");
       } catch (error) {
         console.log(error);
@@ -37,9 +35,7 @@ connectToMongoDB()
     // OFFLOAD DATA FROM COLLECTION
     const offloadData = async function () {
       try {
-        await Tour.deleteMany({});
-        await User.deleteMany({});
-        await Review.deleteMany({});
+        await Resource.deleteMany({});
         console.log("Data successfully offloaded!");
       } catch (error) {
         console.log(error);
@@ -48,10 +44,10 @@ connectToMongoDB()
       }
     };
 
-    // RUNS THE importData FUNCTION, if process.argv[3] equals "--import"
+    // RUNS THE importData FUNCTION, if process.argv[2] equals "--import"
     process.argv[2] === "--import" && importData();
 
-    // RUNS THE offloadData FUNCTION, if process.argv[3] equals "--offload"
+    // RUNS THE offloadData FUNCTION, if process.argv[2] equals "--offload"
     process.argv[2] === "--offload" && offloadData();
 
     // console.log(process.argv);

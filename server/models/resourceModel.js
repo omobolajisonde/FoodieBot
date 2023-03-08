@@ -14,7 +14,7 @@ const resourceSchema = new Schema(
       },
     ],
   },
-  { timestamps }
+  { timestamps: {} }
 );
 
 const Resource = mongoose.model("Resource", resourceSchema);

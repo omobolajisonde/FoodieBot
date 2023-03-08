@@ -20,6 +20,7 @@ const io = new Server(httpServer, {
 
 connectToMongoDB()
   .then(() => {
+    console.log("Connection to MongoDB is successful.");
     httpServer.listen(PORT, HOST, () => {
       console.log("Server running on port ->", PORT);
     });
