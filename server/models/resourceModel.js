@@ -7,6 +7,7 @@ const resourceSchema = new Schema(
     options: [String],
     menu: [
       {
+        id: String,
         name: String,
         price: Number,
         course: String,

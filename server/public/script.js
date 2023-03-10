@@ -1,12 +1,9 @@
 import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
-// import { io } from "socket.io-client";
 
 const socket = io("http://localhost:5000");
-// const socket = io("ws://localhost:5000");
 
 const chatSpace = document.getElementById("chat__space");
 const chatInput = document.getElementById("chat__input");
-const validInputs = ["0", "1", "97", "98", "99"];
 
 socket.io.on("error", (error) => {
   console.log(error.message || error);
