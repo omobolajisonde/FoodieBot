@@ -24,6 +24,10 @@
   background-color: var(--secondary-color);
   border-radius: 1rem;
 }
+/* Style for the scrollbar thumb for the body */
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
 
 /* BASE STYLES */
 *,
@@ -89,7 +93,6 @@ main {
 }
 .chat__text {
   font-size: 1.2rem;
-  color: #343434;
   font-style: italic;
 }
 .chat__space {

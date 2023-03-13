@@ -25,7 +25,7 @@ socket.on("botResponse", ({ type, data }) => {
     case "menu":
       Chat.renderMenu(data.menu);
       Chat.renderMessage(
-        'To order, simply enter the number(s) of the item(s) you\'d like to order using the menu\'s number system above 👆. Separate multiple items with commas (no spaces). For example, "2,3,5" would order "Pepper Soup", "Jollof Rice", and "Beef Teriyaki".',
+        'To order, simply enter the number(s) of the item(s) you\'d like to order using the menu\'s number system above 👆. Separate multiple items with commas (no spaces). For example, "2,4,17" would order "Jollof Rice", "Pepper Soup" and "Fried Plantain".',
         true
       );
       break;

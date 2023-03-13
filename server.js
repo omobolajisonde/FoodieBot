@@ -47,6 +47,8 @@ connectToMongoDB()
 // SOCKET.io
 io.on("connection", async (socket) => {
   const session = socket.request.session;
+  session.menuDisplayed = undefined;
+  saveToSession(session);
   let userId = session.userId;
   let user;
   if (!userId) {
