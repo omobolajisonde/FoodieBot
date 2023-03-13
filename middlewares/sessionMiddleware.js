@@ -1,7 +1,7 @@
 const session = require("express-session");
 var MongoDBStore = require("connect-mongodb-session")(session);
 
-const app = require("../app");
+const app = require("./../app");
 
 var store = new MongoDBStore({
   uri: process.env.DATABASE_URI,
