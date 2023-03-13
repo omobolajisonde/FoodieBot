@@ -1,6 +1,9 @@
 {
   "name": "foodiebot",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "description": "A chatbot that will assist customers in placing orders for their preferred meals.",
   "main": "server.js",
   "scripts": {
