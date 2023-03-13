@@ -35,19 +35,13 @@ socket.on("botResponse", ({ type, data }) => {
       Chat.renderOptions(options);
       break;
 
-    case "orderSummary":
-      Chat.renderOrderSummary(data);
+    case "currentOrder":
+      Chat.renderCurrentOrder(data);
       Chat.renderMessage("Select 99 to checkout your order.", true);
       break;
 
     case "orderHistory":
       Chat.renderOrderHistory(data.orders);
-      break;
-    case "currentOrder":
-      Chat.renderMessage(
-        `${JSON.stringify(data.order)} 🎯 ${data.orderNo}`,
-        true
-      );
       break;
 
     case "unknownInput":

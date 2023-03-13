@@ -1,7 +1,10 @@
 /* VARIABLES */
 :root {
-  --primary-color: #000033;
-  --grey-light: #938e94;
+  --primary-color: #ff9c00;
+  --secondary-color: #ffbd54;
+  --text-color: #000033;
+  --grey-light: #91836c;
+  --off-white: #faf9f6;
 }
 
 /* SCROLLBAR STYLING */
@@ -13,12 +16,12 @@
 ::-webkit-scrollbar-track {
   margin-block: 5px;
   border-radius: 1rem;
-  background-color: #f1f1f1;
+  background-color: var(--off-white);
 }
 
 /* Style for the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #ffbd54;
+  background-color: var(--secondary-color);
   border-radius: 1rem;
 }
 
@@ -39,30 +42,31 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: var(--primary-color);
+  color: var(--text-color);
   font-size: 1.6rem;
-  background-color: #ffbd54;
+  background-color: var(--secondary-color);
 }
 
 .header {
   padding-block: 1rem 1.2rem;
   text-align: center;
-  font-family: "Tilt Prism", cursive;
+  font-family: "Great Vibes", cursive;
   font-weight: 700;
-  letter-spacing: 3px;
+  font-size: 2rem;
+  letter-spacing: 4px;
 }
 
 main {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
-  background-color: #ff9c00;
+  background-color: var(--primary-color);
   border-radius: 2rem;
   padding: 1.5rem;
 }
 
 .chat__banner {
-  border-bottom: 1px solid #ffbd54;
-  padding: 1rem;
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 1rem;
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
@@ -84,8 +88,9 @@ main {
   font-weight: 600;
 }
 .chat__text {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   color: #343434;
+  font-style: italic;
 }
 .chat__space {
   height: 60vh;
@@ -103,15 +108,15 @@ main {
 }
 .chat__con-bot .chat__bubble {
   border-radius: 0 1rem 1rem 1rem;
-  background-color: #000033;
-  color: #f1f1f1;
+  background-color: var(--text-color);
+  color: var(--off-white);
 }
 .chat__con-user {
   align-self: flex-end;
 }
 .chat__con-user .chat__bubble {
   border-radius: 1rem 1rem 0 1rem;
-  background-color: #ffbd54;
+  background-color: var(--secondary-color);
 }
 .chat__user {
   font-size: 1.35rem;
@@ -134,7 +139,7 @@ main {
   font-weight: 500;
 }
 .chat__bubble {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   padding: 1rem;
 }
 .chat__bubble > ul {
@@ -180,6 +185,8 @@ main {
   cursor: pointer;
 }
 .chat__send > svg {
+  width: 2.8rem;
+  height: 2.8rem;
   display: block;
   fill: wheat;
   transition: fill 0.3s ease-out;
@@ -190,7 +197,7 @@ main {
 }
 /* CHAT */
 .food-list {
-  font-size: 1rem;
+  font-size: 1.1rem;
   list-style-position: inside;
 }
 
@@ -199,82 +206,86 @@ main {
 }
 
 .food-list li > span:first-child {
-  color: rgb(255, 0, 0);
+  color: var(--primary-color);
 }
 .food-list li > span:last-child {
   color: rgb(8, 0, 255);
 }
 
 .order {
-  border: 1px solid #ccc;
-  padding: 10px;
-  font-family: Arial, sans-serif;
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+  padding: 1rem;
 }
 
 .order h3 {
-  margin-top: 0;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .order ul {
-  list-style: none;
-  padding: 0;
+  margin-top: 1rem;
 }
 
 .order li {
-  margin-bottom: 5px;
-  font-size: 16px;
+  margin-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
 }
 
 .order__name {
+  color: var(--primary-color);
   font-weight: bold;
+  margin-right: 1rem;
 }
 
 .order__price {
   font-weight: bold;
-  color: green;
 }
 
 .order__total {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
-  font-size: 18px;
+  margin-top: 1rem;
+  font-size: 1.8rem;
 }
 
 .order__total span:last-child {
   font-weight: bold;
-  color: green;
 }
 
 /* ////////////////////// */
 
 .order__history {
-  margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--secondary-color);
   border-radius: 5px;
 }
 
+.order__history:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.order__history h2 {
+  font-size: 1.8rem;
+}
+
 .order__history .item {
+  margin-top: 5px;
+  color: var(--primary-color);
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .order__history .price {
-  color: #777;
-  margin-bottom: 5px;
+  color: var(--grey-light);
+  margin-block: 5px;
 }
 
 .order__history .details {
-  color: #777;
+  color: var(--grey-light);
   font-style: italic;
 }
 
 .order__history .details span {
   font-weight: bold;
-  color: #333;
   margin-right: 5px;
 }

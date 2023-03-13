@@ -70,10 +70,7 @@ exports.handleOptionSent = (socket, session, user, User) => async (option) => {
 
     case option === "97":
       if (session.currentOrder) {
-        emitBotResponseEvent(socket, "currentOrder", {
-          order: session.currentOrder,
-          orderNo: session.orderNo ? session.orderNo + 1 : 1,
-        });
+        emitBotResponseEvent(socket, "currentOrder", session.currentOrder);
       } else {
         emitBotResponseEvent(socket, "", {
           text: "I'm sorry, but it looks like you don't have any active order. If you'd like to place a new order, please select option 1 to see our menu.",
@@ -103,7 +100,7 @@ exports.handleOptionSent = (socket, session, user, User) => async (option) => {
           (prevValue, item) => prevValue + item.price,
           0
         );
-        emitBotResponseEvent(socket, "orderSummary", { order, total });
+        emitBotResponseEvent(socket, "currentOrder", { order, total });
         session.currentOrder = { order, total };
         saveToSession(session);
       } else {

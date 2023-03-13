@@ -1,0 +1,29 @@
+@media screen and (max-width: 46.875em) {
+  html {
+    font-size: 50%;
+  }
+  main {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 35.375em) {
+  html {
+    font-size: 43.75%;
+  }
+  main {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 25em) {
+  html {
+    font-size: 31.25%;
+  }
+  main {
+    width: 100%;
+  }
+  body {
+    padding: 1rem;
+  }
+}

@@ -81,9 +81,9 @@ class Chat {
     this.renderMessage(chatMsg, true);
   }
 
-  renderOrderSummary(data) {
+  renderCurrentOrder(data) {
     const chatMsg = `<div class="order">
-      <h3>Order Summary</h3>
+      <h3>Current Order</h3>
       <ul>
       ${data.order
         .map(
