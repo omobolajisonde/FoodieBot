@@ -1,8 +1,6 @@
 const session = require("express-session");
 var MongoDBStore = require("connect-mongodb-session")(session);
 
-const app = require("./../app");
-
 var store = new MongoDBStore({
   uri: process.env.DATABASE_URI,
   collection: "sessions",
@@ -22,7 +20,6 @@ const sess = {
 };
 
 if (process.env.NODE_ENV === "production") {
-  app.set("trust proxy", 1); // trust first proxy
   sess.cookie.secure = true; // serve secure cookies
 }
 
