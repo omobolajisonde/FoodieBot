@@ -42,7 +42,14 @@ body {
   color: var(--primary-color);
   font-size: 1.6rem;
   background-color: #ffbd54;
-  padding-block: 5rem 0;
+}
+
+.header {
+  padding-block: 1rem 1.2rem;
+  text-align: center;
+  font-family: "Tilt Prism", cursive;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
 main {
@@ -96,12 +103,15 @@ main {
 }
 .chat__con-bot .chat__bubble {
   border-radius: 0 1rem 1rem 1rem;
+  background-color: #000033;
+  color: #f1f1f1;
 }
 .chat__con-user {
   align-self: flex-end;
 }
 .chat__con-user .chat__bubble {
   border-radius: 1rem 1rem 0 1rem;
+  background-color: #ffbd54;
 }
 .chat__user {
   font-size: 1.35rem;
@@ -110,10 +120,8 @@ main {
 }
 .chat__bot {
   font-size: 1.35rem;
-  width: 15rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 1rem;
 }
 .chat__bot > img {
@@ -121,13 +129,13 @@ main {
   height: 3rem;
   border-radius: 50%;
 }
-.chat__bot:last-child {
-  color: #343434;
+.chat__bot > span:first-of-type {
+  padding-inline: 5px;
+  font-weight: 500;
 }
 .chat__bubble {
   font-size: 1.4rem;
   padding: 1rem;
-  background-color: #ffbd54;
 }
 .chat__bubble > ul {
   list-style-position: inside;
@@ -239,4 +247,34 @@ main {
 .order__total span:last-child {
   font-weight: bold;
   color: green;
+}
+
+/* ////////////////////// */
+
+.order__history {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.order__history .item {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.order__history .price {
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.order__history .details {
+  color: #777;
+  font-style: italic;
+}
+
+.order__history .details span {
+  font-weight: bold;
+  color: #333;
+  margin-right: 5px;
 }

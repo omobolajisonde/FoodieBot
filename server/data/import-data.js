@@ -1,9 +1,10 @@
 const fs = require("fs");
+const path = require("path");
 const mongoose = require("mongoose");
 const connectToMongoDB = require("../db");
 require("dotenv").config();
 
-const Resource = require("../models/resourceModel");
+const Menu = require("../models/menuModel");
 
 // const DB = process.env.DATABASE.replace(
 //   "<PASSWORD>",
@@ -15,15 +16,14 @@ connectToMongoDB()
     console.log("Connection to MongoDB is successful.");
     // READ JSON FILE
 
-    const options = JSON.parse(
-      fs.readFileSync(`${__dirname}/options.json`, "utf-8")
+    const menu = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "menu.json"), "utf-8")
     );
-    const menu = JSON.parse(fs.readFileSync(`${__dirname}/menu.json`, "utf-8"));
 
     // IMPORT DATA INTO DB
     const importData = async function () {
       try {
-        await Resource.create({ options, menu });
+        await Menu.create(menu);
         console.log("Data successfully uploaded!");
       } catch (error) {
         console.log(error);
@@ -35,7 +35,7 @@ connectToMongoDB()
     // OFFLOAD DATA FROM COLLECTION
     const offloadData = async function () {
       try {
-        await Resource.deleteMany({});
+        await Menu.deleteMany({});
         console.log("Data successfully offloaded!");
       } catch (error) {
         console.log(error);

@@ -20,7 +20,7 @@ const chatSchema = new Schema(
       ref: "User",
     },
   },
-  { timestamps: {} }
+  { timestamps: { updatedAt: null } }
 );
 
 const Chat = mongoose.model("Chat", chatSchema);
