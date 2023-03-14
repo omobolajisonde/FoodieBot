@@ -23,7 +23,7 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "*",
+    origin: ["https://foodiebotaltschool.azurewebsites.net/"],
     credentials: true,
   },
 });

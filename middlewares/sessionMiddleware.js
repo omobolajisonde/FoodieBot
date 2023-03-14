@@ -12,15 +12,22 @@ store.on("error", function (error) {
 });
 
 const sess = {
+  name: "foodieBot",
   secret: process.env.SESSION_SECRET,
   resave: true,
   saveUninitialized: true,
   store: store,
-  cookie: { maxAge: +process.env.COOKIE_EXPIRES_IN },
+  cookie: {
+    name: "foodieBot",
+    domain: "https://foodiebotaltschool.azurewebsites.net/",
+    maxAge: +process.env.COOKIE_EXPIRES_IN,
+  },
 };
 
 if (process.env.NODE_ENV === "production") {
+  console.log("🎯🎯🎯");
   sess.cookie.secure = true; // serve secure cookies
+  sess.cookie.httpOnly = true; // serve secure cookies
 }
 
 module.exports = session(sess);

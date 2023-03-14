@@ -103,10 +103,10 @@ main {
   padding-inline: 1rem;
 }
 .chat__con {
-  max-width: 50%;
   margin-block: 1rem;
 }
 .chat__con-bot {
+  max-width: 60%;
   align-self: flex-start;
 }
 .chat__con-bot .chat__bubble {
@@ -115,6 +115,7 @@ main {
   color: var(--off-white);
 }
 .chat__con-user {
+  max-width: 40%;
   align-self: flex-end;
 }
 .chat__con-user .chat__bubble {
@@ -142,7 +143,7 @@ main {
   font-weight: 500;
 }
 .chat__bubble {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   padding: 1rem;
 }
 .chat__bubble > ul {
@@ -200,7 +201,7 @@ main {
 }
 /* CHAT */
 .food-list {
-  font-size: 1.1rem;
+  font-size: 1rem;
   list-style-position: inside;
 }
 

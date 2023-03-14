@@ -1,8 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const mongoose = require("mongoose");
+require("dotenv").config({ path: "../.env" });
 const connectToMongoDB = require("../db");
-require("dotenv").config();
 
 const Menu = require("../models/menuModel");
 

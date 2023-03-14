@@ -8,6 +8,7 @@ const sessionMiddleware = require("./middlewares/sessionMiddleware");
 const app = express();
 
 // Session middleware
+app.set("trust proxy", 1);
 app.use(sessionMiddleware);
 app.use(cookieParser());
 

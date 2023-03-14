@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/bc23d1c3-498f-4650-97aa-50bd0ee7e63f/resourceGroups/AppService-rg/providers/Microsoft.Web/sites/FoodieBotAltSchool",
+  "appService.deploySubpath": "."
+}
