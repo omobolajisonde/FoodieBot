@@ -34,4 +34,12 @@ app.get("/", (req, res) => {
   res.status(200).render("index", { timeOfTheDay });
 });
 
+// Any request that makes it to this part has lost it's way
+app.all("*", (req, res, next) => {
+  return res.status(404).json({
+    status: "failed",
+    message: `Can't find ${req.originalUrl} on this server! The resource you're looking for can't be found. Please check the URL before trying again.`,
+  });
+});
+
 module.exports = app;

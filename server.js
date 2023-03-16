@@ -23,7 +23,11 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: ["https://foodiebotaltschool.azurewebsites.net/"],
+    origin: [
+      "https://foodiebotaltschool.azurewebsites.net",
+      `http://localhost:${PORT}`,
+    ],
+    methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD"],
     credentials: true,
   },
 });
