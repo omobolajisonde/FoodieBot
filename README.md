@@ -126,7 +126,7 @@ Visit http://127.0.0.1:5000/ or http://localhost:8080/ on your browser. You shou
 ---
 
 ## Deployment
-[foodiebotaltschool.azurewebsites.net/](https://foodiebotaltschool.azurewebsites.net/)
+[foodiebotaltschool.onrender.com/](https://foodiebotaltschool.onrender.com/)
 
 ## Authors
 [Sonde Omobolaji](https://github.com/omobolajisonde) 
