@@ -25,7 +25,7 @@ const sess = {
 
 if (process.env.NODE_ENV === "production") {
   console.log("🎯🎯🎯");
-  // sess.cookie.domain = ".foodiebotaltschool.azurewebsites.net";
+  sess.cookie.domain = ".foodiebotaltschool.onrender.com";
   sess.cookie.secure = true; // serve secure cookies
   sess.cookie.httpOnly = true; // serve secure cookies
 }
